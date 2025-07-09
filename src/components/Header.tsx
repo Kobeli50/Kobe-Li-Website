@@ -16,12 +16,6 @@ const Header = () => {
               About
             </a>
             <a
-              href="#skills"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Skills
-            </a>
-            <a
               href="#projects"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
