@@ -1,4 +1,4 @@
-import { Github, Instagram, Twitter, Menu } from "lucide-react";
+import { Github, Instagram, Twitter, Linkedin, Book, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -38,11 +38,11 @@ const Header = () => {
           <div className="flex items-center space-x-3">
             <Button variant="ghost" size="icon" asChild>
               <a
-                href="https://github.com"
+                href="https://www.linkedin.com/in/kobeli50/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Github className="h-5 w-5" />
+                <Linkedin className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
@@ -52,6 +52,24 @@ const Header = () => {
                 rel="noopener noreferrer"
               >
                 <Instagram className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <a
+                href="https://www.goodreads.com/user/show/187557631-kobe"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
