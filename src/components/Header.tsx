@@ -60,16 +60,7 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Instagram className="h-5 w-5" />
-              </a>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="h-5 w-5" />
+                <Book className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
@@ -83,6 +74,15 @@ const Header = () => {
             </Button>
             <Button variant="ghost" size="icon" className="md:hidden">
               <Menu className="h-5 w-5" />
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="h-5 w-5" />
+              </a>
             </Button>
           </div>
         </div>
