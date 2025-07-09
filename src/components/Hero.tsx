@@ -16,12 +16,11 @@ const Hero = () => {
               .<br />
               I'm a VC Intern
               <br />
-              @Lockstep Venutere
+              @Lockstep Venture
             </h1>
 
             <div className="flex items-center space-x-2 text-lg text-muted-foreground">
-              <span>Think</span>
-              <span className="text-2xl">🧠</span>
+              <span>Check out Bear Bubble Tea in East Meadow</span>
             </div>
           </div>
 
