@@ -20,7 +20,7 @@ const Hero = () => {
             </h1>
 
             <div className="flex items-center space-x-2 text-lg text-muted-foreground">
-              <span>Check out Bear Bubble Tea in East Meadow</span>
+              <span>Check out Bear Bubble Tea in East Meadow!</span>
             </div>
           </div>
 

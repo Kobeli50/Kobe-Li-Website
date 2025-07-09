@@ -4,16 +4,17 @@ const About = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-8 text-center">About Me</h2>
-          
+
           <div className="prose prose-lg max-w-none text-center">
             <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-              I'm 22, currently a software engineer passionate about creating amazing digital experiences. 
-              I've led many software teams to success and been a pivotal part of many early stage startups.
+              I'm 19, currently a college student at Baruch College studying
+              Finance. I like learning, investing, and connecting with cool
+              people.
             </p>
-            
+
             <p className="text-xl text-muted-foreground leading-relaxed">
-              I got my first Software Developer job at 19 and have been working in the industry 
-              ever since, constantly learning and pushing the boundaries of what's possible with code.
+              I enjoy reading about pretty much anything, so feel free to send
+              recs. I also enjoy playing video games, poker, anime, and skiing
             </p>
           </div>
         </div>
