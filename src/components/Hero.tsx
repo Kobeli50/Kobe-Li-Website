@@ -1,4 +1,4 @@
-import heroCharacter from "@/assets/hero-character.png";
+import heroCharacter from "@/assets/cow.png";
 
 const Hero = () => {
   return (
@@ -7,16 +7,18 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in-up">
             <h1 className="text-6xl md:text-7xl font-bold tracking-tight leading-none">
-              Hello, my<br />
+              Hello, my
+              <br />
               name's{" "}
               <span className="bg-gradient-hero bg-clip-text text-transparent">
-                John
+                Kobe Li
               </span>
               .<br />
-              I'm a Full<br />
+              I'm a Full
+              <br />
               Stack Developer.
             </h1>
-            
+
             <div className="flex items-center space-x-2 text-lg text-muted-foreground">
               <span>Think</span>
               <span className="text-2xl">🧠</span>
@@ -25,9 +27,9 @@ const Hero = () => {
 
           <div className="flex justify-center lg:justify-end">
             <div className="relative animate-float">
-              <img 
-                src={heroCharacter} 
-                alt="3D Character Illustration" 
+              <img
+                src={heroCharacter}
+                alt="3D Character Illustration"
                 className="w-80 h-80 object-contain"
               />
               <div className="absolute -inset-4 bg-gradient-accent opacity-20 rounded-full blur-xl"></div>
