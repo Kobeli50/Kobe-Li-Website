@@ -14,9 +14,9 @@ const Hero = () => {
                 Kobe Li
               </span>
               .<br />
-              I'm a Full
+              I'm a VC Intern
               <br />
-              Stack Developer.
+              @Lockstep Venutere
             </h1>
 
             <div className="flex items-center space-x-2 text-lg text-muted-foreground">
