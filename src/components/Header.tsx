@@ -19,7 +19,7 @@ const Header = () => {
               href="#projects"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              Projects
+              Portfolio
             </a>
             <a
               href="/blogs"
