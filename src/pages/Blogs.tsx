@@ -13,6 +13,11 @@ const posts = [
 const Blogs: React.FC = () => {
   return (
     <div className="max-w-2xl mx-auto py-8 px-4">
+      <Link to="/" className="inline-block mb-6">
+        <button className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition">
+          ← Back to Home
+        </button>
+      </Link>
       <h1 className="text-3xl font-bold mb-6">Blogs</h1>
       <ul>
         {posts.map((post) => (
