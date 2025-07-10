@@ -14,8 +14,8 @@ const About = () => {
 
             <p className="text-xl text-muted-foreground leading-relaxed">
               I enjoy reading about pretty much anything, so feel free to send
-              recs. I also enjoy playing video game and poker, watching anime,
-              and skiing
+              recs. I also enjoy playing video games and poker, watching anime,
+              and skiing.
             </p>
           </div>
         </div>
