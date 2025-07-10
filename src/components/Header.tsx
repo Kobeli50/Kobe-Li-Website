@@ -22,6 +22,12 @@ const Header = () => {
               Projects
             </a>
             <a
+              href="/blogs"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Blogs
+            </a>
+            <a
               href="#contact"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
