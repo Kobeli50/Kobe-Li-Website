@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const posts = [
   {
-    slug: "Blog Title",
-    title: "Comming soon.",
-    date: "2025-15-08",
+    slug: "Blog-Title",
+    title: "Coming soon.",
+    date: "08/15/2025",
     excerpt: "Coming soon.",
   },
 ];
