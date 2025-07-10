@@ -8,8 +8,8 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 const SERVICE_ID = "service_ayn6eya";
-const TEMPLATE_ID = "template_n6xgvop"; // Replace with your EmailJS template ID
-const PUBLIC_KEY = "geOJSm8kjUeIzdEj8"; // Replace with your EmailJS public key
+const TEMPLATE_ID = "template_n6xgvop"; // your actual template ID
+const PUBLIC_KEY = "geOJSm8kjUeIzdEj8"; // your actual public key
 
 const Contact = () => {
   const { toast } = useToast();
@@ -21,18 +21,10 @@ const Contact = () => {
 
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
       (result) => {
-        toast({
-          title: "Message sent!",
-          description: "Thank you for your message. I'll get back to you soon.",
-        });
-        form.current?.reset();
+        // Success: show toast or alert
       },
       (error) => {
-        toast({
-          title: "Failed to send message",
-          description: "Please try again later.",
-          variant: "destructive",
-        });
+        // Error: show toast or alert
       }
     );
   };
