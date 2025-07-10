@@ -8,11 +8,7 @@ const FirstPost: React.FC = () => (
         ← Back to Blogs
       </button>
     </Link>
-    <h1 className="text-3xl font-bold mb-4">Coming Soon!!!</h1>
-    <p className="text-gray-500 text-sm mb-2">2024-05-01</p>
-    <div className="prose">
-      <p>Coming Soon!!!</p>
-    </div>
+    <h1 className="text-3xl font-bold mb-4">Coming soon.</h1>
   </div>
 );
 
