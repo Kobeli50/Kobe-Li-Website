@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 const posts = [
   {
-    slug: "first-post",
-    title: "My First Blog Post",
-    date: "2024-05-01",
-    excerpt: "This is the excerpt for my first blog post.",
+    slug: "Blog Title",
+    title: "Comming soon.",
+    date: "2025-15-08",
+    excerpt: "Coming soon.",
   },
 ];
 
