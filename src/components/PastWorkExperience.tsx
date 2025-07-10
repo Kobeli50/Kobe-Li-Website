@@ -1,3 +1,4 @@
+import React from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -8,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
 
-const Projects = () => {
+const PastWorkExperience: React.FC = () => {
   const projects = [
     {
       title: "TaskFlow",
@@ -35,7 +36,7 @@ const Projects = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center">
-            Projects I've Worked On
+            Past Work & Experience
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -80,4 +81,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default PastWorkExperience;
