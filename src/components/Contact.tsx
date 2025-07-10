@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const SERVICE_ID = "service_ayn6eya";
@@ -14,19 +14,33 @@ const PUBLIC_KEY = "geOJSm8kjUeIzdEj8"; // your actual public key
 const Contact = () => {
   const { toast } = useToast();
   const form = useRef<HTMLFormElement>(null);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.current) return;
 
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
-      (result) => {
-        // Success: show toast or alert
-      },
-      (error) => {
-        // Error: show toast or alert
-      }
-    );
+    setLoading(true);
+    emailjs
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+      .then(
+        (result) => {
+          toast({
+            title: "Message sent!",
+            description:
+              "Thank you for your message. I'll get back to you soon.",
+          });
+          form.current?.reset();
+        },
+        (error) => {
+          toast({
+            title: "Failed to send message",
+            description: "Please try again later.",
+            variant: "destructive",
+          });
+        }
+      )
+      .finally(() => setLoading(false));
   };
 
   return (
@@ -90,8 +104,9 @@ const Contact = () => {
                 <Button
                   type="submit"
                   className="w-full bg-gradient-hero hover:opacity-90 text-white py-3"
+                  disabled={loading}
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </CardContent>
