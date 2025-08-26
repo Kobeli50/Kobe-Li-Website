@@ -9,7 +9,7 @@ import emailjs from "@emailjs/browser";
 
 const SERVICE_ID = "service_ayn6eya";
 const TEMPLATE_ID = "template_kyawugh"; // your actual template ID
-const PUBLIC_KEY = "geOJSm8kjUeIzdEj8"; // your actual public key
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string; // your actual public key
 
 const Contact = () => {
   const { toast } = useToast();
