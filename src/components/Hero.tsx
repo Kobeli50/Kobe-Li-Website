@@ -20,7 +20,10 @@ const Hero = () => {
             </h1>
 
             <div className="flex items-center space-x-2 text-lg text-muted-foreground">
-              <span>Check out Bear Bubble Tea in East Meadow!</span>
+              <span>
+                “Dear friends, do you know that you are lucky people? You don't
+                have any cows to lose.” - Thich Nhat Hanh
+              </span>
             </div>
           </div>
 
