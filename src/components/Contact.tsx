@@ -9,7 +9,7 @@ import emailjs from "@emailjs/browser";
 
 const SERVICE_ID = "service_ayn6eya";
 const TEMPLATE_ID = "template_kyawugh";
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string;
+const PUBLIC_KEY = "geOJSm8kjUeIzdEj8";
 
 const MIN_FILL_MS = 3000;
 const COOLDOWN_MS = 60_000;
