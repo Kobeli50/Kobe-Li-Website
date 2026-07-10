@@ -5,8 +5,8 @@ import {
   Heart,
   Book,
   Instagram,
-  Rss,
 } from "lucide-react";
+import SubstackIcon from "@/components/icons/SubstackIcon";
 
 const Footer = () => {
   return (
@@ -45,7 +45,7 @@ const Footer = () => {
               aria-label="Substack"
               className="text-muted-foreground hover:text-accent transition-colors"
             >
-              <Rss className="w-6 h-6" />
+              <SubstackIcon className="w-6 h-6" />
             </a>
             <a
               href="https://x.com/Kobeli50"

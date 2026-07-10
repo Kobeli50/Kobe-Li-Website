@@ -1,5 +1,6 @@
-import { Github, Instagram, Twitter, Linkedin, Book, Rss, Menu } from "lucide-react";
+import { Github, Instagram, Twitter, Linkedin, Book, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SubstackIcon from "@/components/icons/SubstackIcon";
 
 const Header = () => {
   return (
@@ -64,7 +65,7 @@ const Header = () => {
                 rel="noopener noreferrer"
                 aria-label="Substack"
               >
-                <Rss className="h-5 w-5" />
+                <SubstackIcon className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>

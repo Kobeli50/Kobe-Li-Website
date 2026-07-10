@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Rss, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import SubstackIcon from "@/components/icons/SubstackIcon";
 
 const Blogs: React.FC = () => {
   return (
@@ -13,8 +14,7 @@ const Blogs: React.FC = () => {
 
       <h1 className="text-3xl font-bold mb-4">Writing</h1>
       <p className="text-gray-600 mb-8">
-        I write essays and notes over on Substack. Subscribe there to get new
-        posts in your inbox — the same pieces also go up on Medium.
+        Writing on random thoughts.
       </p>
 
       {/* Primary: Substack */}
@@ -24,7 +24,7 @@ const Blogs: React.FC = () => {
         rel="noopener noreferrer"
         className="group flex items-center gap-4 rounded-lg border border-border p-5 mb-4 transition hover:border-blue-500 hover:shadow-sm"
       >
-        <Rss className="h-6 w-6 shrink-0 text-blue-600" />
+        <SubstackIcon className="h-6 w-6 shrink-0 text-[#FF6719]" />
         <div className="flex-1">
           <div className="flex items-center gap-1 font-semibold">
             Read &amp; subscribe on Substack
