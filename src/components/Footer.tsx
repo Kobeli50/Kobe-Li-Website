@@ -5,6 +5,7 @@ import {
   Heart,
   Book,
   Instagram,
+  Rss,
 } from "lucide-react";
 
 const Footer = () => {
@@ -36,6 +37,15 @@ const Footer = () => {
               className="text-muted-foreground hover:text-accent transition-colors"
             >
               <Book className="w-6 h-6" />
+            </a>
+            <a
+              href="https://substack.com/@kobeli2"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Substack"
+              className="text-muted-foreground hover:text-accent transition-colors"
+            >
+              <Rss className="w-6 h-6" />
             </a>
             <a
               href="https://x.com/Kobeli50"

@@ -1,4 +1,4 @@
-import { Github, Instagram, Twitter, Linkedin, Book, Menu } from "lucide-react";
+import { Github, Instagram, Twitter, Linkedin, Book, Rss, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -55,6 +55,16 @@ const Header = () => {
                 rel="noopener noreferrer"
               >
                 <Book className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <a
+                href="https://substack.com/@kobeli2"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Substack"
+              >
+                <Rss className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
