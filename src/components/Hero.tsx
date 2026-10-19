@@ -1,22 +1,40 @@
 import heroCharacter from "@/assets/cow.png";
 
+// Pre-fills the contact form's subject so deal emails are easy to spot.
+const prefillDealSubject = () => {
+  const subject = document.getElementById("subject") as HTMLInputElement | null;
+  if (subject && !subject.value) subject.value = "Deal: ";
+};
+
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-16">
+    <section className="min-h-screen flex items-center justify-center pt-24">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in-up">
-            <h1 className="text-6xl md:text-7xl font-bold tracking-tight leading-none">
+            <a
+              href="#contact"
+              onClick={prefillDealSubject}
+              className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-1.5 text-sm text-muted-foreground transition-colors hover:border-accent hover:text-foreground"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-turquoise opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-turquoise"></span>
+              </span>
+              Looking for private deals →
+            </a>
+
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-none">
               Hello, my
               <br />
               name's{" "}
-              <span className="bg-gradient-hero bg-clip-text text-transparent">
+              <span className="whitespace-nowrap bg-gradient-hero bg-clip-text text-transparent">
                 Kobe Li
               </span>
               .<br />
-              I'm a VC Intern
+              I like doing
               <br />
-              @Lockstep Venture
+              random shit
             </h1>
 
             <div className="flex items-center space-x-2 text-lg text-muted-foreground">

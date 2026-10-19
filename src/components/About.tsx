@@ -7,15 +7,22 @@ const About = () => {
 
           <div className="prose prose-lg max-w-none text-center">
             <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-              I'm 19, currently a college student at Baruch College studying
-              Finance. I like learning, investing, and connecting with cool
-              people.
+              I'm 20, currently a college student at Baruch College studying
+              Finance with a minor in Philosophy. I like learning, investing,
+              and connecting with cool people.
             </p>
 
             <p className="text-xl text-muted-foreground leading-relaxed">
-              I enjoy reading about pretty much anything, so feel free to send
-              recs. I also enjoy playing video games and poker, watching anime,
-              and skiing.
+              I like{" "}
+              <a
+                href="/gallery"
+                className="text-foreground underline decoration-purple-light underline-offset-4 transition-colors hover:decoration-purple"
+              >
+                photography
+              </a>{" "}
+              and reading. I'll read about pretty much anything, so feel free
+              to send recs. I also enjoy playing video games and poker,
+              watching anime, and skiing.
             </p>
           </div>
         </div>

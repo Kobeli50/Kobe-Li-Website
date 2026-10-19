@@ -17,12 +17,11 @@ const Blogs: React.FC = () => {
         Writing on random thoughts.
       </p>
 
-      {/* Primary: Substack */}
       <a
         href="https://substack.com/@kobeli2"
         target="_blank"
         rel="noopener noreferrer"
-        className="group flex items-center gap-4 rounded-lg border border-border p-5 mb-4 transition hover:border-blue-500 hover:shadow-sm"
+        className="group flex items-center gap-4 rounded-lg border border-border p-5 transition hover:border-blue-500 hover:shadow-sm"
       >
         <SubstackIcon className="h-6 w-6 shrink-0 text-[#FF6719]" />
         <div className="flex-1">
@@ -31,24 +30,10 @@ const Blogs: React.FC = () => {
             <ArrowUpRight className="h-4 w-4 opacity-0 transition group-hover:opacity-100" />
           </div>
           <p className="text-sm text-gray-500">
-            My primary home for writing — new posts land here first.
+            Where all my writing lives.
           </p>
         </div>
       </a>
-
-      {/* Secondary: Medium */}
-      <p className="text-sm text-gray-500">
-        Also on{" "}
-        <a
-          href="https://medium.com/@kobeli553"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 hover:underline"
-        >
-          Medium
-        </a>
-        .
-      </p>
     </div>
   );
 };

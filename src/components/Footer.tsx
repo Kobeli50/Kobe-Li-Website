@@ -67,7 +67,7 @@ const Footer = () => {
 
           <div className="text-center text-muted-foreground">
             <p className="flex items-center justify-center space-x-2"></p>
-            <p className="mt-2 text-sm">© 2025 Kobe Li. All rights reserved.</p>
+            <p className="mt-2 text-sm">© {new Date().getFullYear()} Kobe Li. All rights reserved.</p>
           </div>
         </div>
       </div>
