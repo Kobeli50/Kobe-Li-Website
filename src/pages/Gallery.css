@@ -1,0 +1,89 @@
+.gallery-page .journal-intro {
+  align-items: flex-end;
+  padding-top: 66px;
+  padding-bottom: 64px;
+}
+
+.gallery-page .journal-intro h1 {
+  margin: 0;
+}
+
+.gallery-page .journal-intro .gallery-intro-aside {
+  width: 270px;
+}
+
+.gallery-page .journal-intro .gallery-intro-aside p {
+  font-size: 19px;
+  color: #505945;
+}
+
+.gallery-page .journal-intro .camera-note {
+  font-size: 11px;
+  line-height: 1.7;
+  letter-spacing: 0;
+  text-transform: none;
+  margin-top: 10px;
+}
+
+.gallery-page .journal-collections {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.journal-collections .collection-card,
+.journal-collections .collection-card:nth-child(even) {
+  display: block;
+  min-width: 0;
+  padding-top: 0;
+}
+
+.journal-collections .collection-card:focus-visible {
+  outline: 2px solid #66704e;
+  outline-offset: 7px;
+}
+
+.journal-collections .collection-cover {
+  aspect-ratio: 4 / 3;
+}
+
+.journal-collections .collection-cover img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.journal-collections .collection-caption {
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.journal-collections .collection-caption h3 {
+  font-size: 28px;
+}
+
+.journal-collections .collection-caption > svg {
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.journal-collections .collection-caption span {
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .gallery-page .journal-collections { gap: 20px; }
+  .journal-collections .collection-caption h3 { font-size: 25px; }
+}
+
+@media (max-width: 700px) {
+  .gallery-page .journal-intro {
+    align-items: flex-start;
+    gap: 28px;
+    padding-block: 45px 38px;
+  }
+  .gallery-page .journal-intro .gallery-intro-aside { width: 100%; }
+  .gallery-page .journal-intro .camera-note { margin-bottom: 20px; }
+  .gallery-page .journal-collections { grid-template-columns: 1fr; gap: 38px; }
+  .journal-collections .collection-caption h3 { font-size: 28px; }
+  .gallery-page .journal-end { padding-block: 64px; }
+}

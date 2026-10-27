@@ -1,30 +1,29 @@
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gradient-subtle">
-      <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-8 text-center">About Me</h2>
-
-          <div className="prose prose-lg max-w-none text-center">
-            <p className="text-xl text-muted-foreground leading-relaxed mb-6">
+    <section id="about" className="about-section" aria-labelledby="about-title">
+      <div className="page-width about-layout">
+        <div className="about-heading">
+          <h2 id="about-title">About Me<span aria-hidden="true">.</span></h2>
+        </div>
+        <div className="about-copy">
+            <p className="about-lead">
               I'm 20, currently a college student at Baruch College studying
-              Finance with a minor in Philosophy. I like learning, investing,
-              and connecting with cool people.
+              <strong> Finance</strong> with a minor in <strong>Philosophy</strong>. I like learning, investing,
+              and connecting with cool people. Still working and learning toward publishing more stuff.
             </p>
 
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p>
               I like{" "}
               <a
                 href="/gallery"
-                className="text-foreground underline decoration-purple-light underline-offset-4 transition-colors hover:decoration-purple"
+                className="underline underline-offset-4"
               >
                 photography
               </a>{" "}
               and reading. I'll read about pretty much anything, so feel free
-              to send recs. I also enjoy playing video games and poker,
-              watching anime, and skiing.
+              to send recs.
             </p>
-          </div>
+            <p>I also enjoy hiking, skiing, playing video games, poker, and watching shows and movies.</p>
         </div>
       </div>
     </section>

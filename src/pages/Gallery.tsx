@@ -1,58 +1,34 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import PhotoGrid from "@/components/PhotoGrid";
-import { albums, favorites } from "@/lib/photos";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { collections } from "@/lib/photos";
+import "./Gallery.css";
 
-const Gallery: React.FC = () => {
-  return (
-    <div className="max-w-6xl mx-auto py-8 px-4">
-      <Link to="/" className="inline-block mb-6">
-        <button className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition">
-          ← Back to Home
-        </button>
-      </Link>
-
-      <h1 className="text-3xl font-bold mb-4">Gallery</h1>
-      <p className="text-gray-600 mb-10">
-        Shooting with a Nikon Z6III.
-      </p>
-
-      {favorites.length === 0 && albums.length === 0 && (
-        <p className="text-gray-500">Photos coming soon.</p>
-      )}
-
-      {favorites.length > 0 && (
-        <section className="mb-14">
-          <h2 className="text-xl font-semibold mb-4">Favorites</h2>
-          <PhotoGrid photos={favorites} />
-        </section>
-      )}
-
-      {albums.length > 0 && (
-        <section>
-          <h2 className="text-xl font-semibold mb-4">Galleries</h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {albums.map((album) => (
-              <Link key={album.slug} to={`/gallery/${album.slug}`} className="group block">
-                <div className="aspect-[4/3] overflow-hidden rounded-lg bg-muted">
-                  <img
-                    src={album.cover.src}
-                    alt={album.cover.alt}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div className="mt-3 font-semibold">{album.title}</div>
-                <p className="text-sm text-gray-500">
-                  {album.photos.length} {album.photos.length === 1 ? "photo" : "photos"}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
-    </div>
-  );
-};
+const Gallery = () => (
+  <div className="gallery-page">
+    <Header />
+    <main id="main-content" className="page-width">
+      <div className="gallery-intro journal-intro">
+        <h1>The photo <br /><em>journal.</em></h1>
+        <div className="gallery-intro-aside"><p>Still figuring it out</p><span className="camera-note">Was shooting with D610, now Z6III (11/26)</span><a href="#collections" className="text-link">Browse collections <ArrowDown size={16} /></a></div>
+      </div>
+      <section id="collections" className="collections-section" aria-labelledby="collections-title">
+        <div className="section-rule"><h2 id="collections-title">Collections</h2><span>{String(collections.length).padStart(2, "0")} collections / {String(collections.reduce((sum, album) => sum + album.photos.length, 0)).padStart(2, "0")} photographs</span></div>
+        <div className="collection-grid journal-collections">
+          {collections.map((album, index) => (
+            <Link key={album.slug} to={`/gallery/${album.slug}`} className="collection-card">
+              <div className="collection-cover"><img src={album.cover.thumbnailSrc ?? album.cover.src} alt={album.cover.alt} width={album.cover.width} height={album.cover.height} loading={index === 0 ? "eager" : "lazy"} decoding="async" /><span className="collection-open" aria-hidden="true"><ArrowUpRight size={24} /></span></div>
+              <div className="collection-caption"><div><h3>{album.title}</h3><span>{album.photos.length} photographs</span></div><ArrowUpRight size={22} aria-hidden="true" /></div>
+            </Link>
+          ))}
+        </div>
+        {collections.length === 0 && <p className="section-note">The first collection is on its way.</p>}
+      </section>
+      <p className="journal-end">An ongoing collection.<br /><span>More moments to come.</span></p>
+    </main>
+    <Footer />
+  </div>
+);
 
 export default Gallery;

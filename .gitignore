@@ -29,3 +29,7 @@ dist-ssr
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Keep the removed photograph locally, out of the published source repository.
+/src/assets/photos/albums/2026-09-06/DSC_6589.jpg
+/src/assets/photos/previews/2026-09-06/DSC_6589.jpg

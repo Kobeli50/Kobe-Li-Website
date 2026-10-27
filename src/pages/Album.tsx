@@ -1,34 +1,30 @@
-import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import PhotoGrid from "@/components/PhotoGrid";
-import { albums } from "@/lib/photos";
+import { albums, collections, formatPhotoDate } from "@/lib/photos";
 import NotFound from "./NotFound";
 
-const Album: React.FC = () => {
+const Album = () => {
   const { slug } = useParams();
-  const album = albums.find((a) => a.slug === slug);
-
-  // Client-side navigation keeps the old scroll position; start albums at the top.
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [slug]);
-
+  const theme = collections.find((collection) => collection.slug === slug);
+  const navigation = theme ? collections : albums;
+  const albumIndex = navigation.findIndex((album) => album.slug === slug);
+  const album = navigation[albumIndex];
   if (!album) return <NotFound />;
+  const nextAlbum = navigation[(albumIndex + 1) % navigation.length];
 
   return (
-    <div className="max-w-6xl mx-auto py-8 px-4">
-      <Link to="/gallery" className="inline-block mb-6">
-        <button className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition">
-          ← Back to Gallery
-        </button>
-      </Link>
-
-      <h1 className="text-3xl font-bold mb-2">{album.title}</h1>
-      <p className="text-gray-600 mb-8">
-        {album.photos.length} {album.photos.length === 1 ? "photo" : "photos"}
-      </p>
-
-      <PhotoGrid photos={album.photos} />
+    <div className="album-page">
+      <Header />
+      <main id="main-content" className="page-width">
+        <Link to="/gallery" className="text-link back-link"><ArrowLeft size={16} /> All collections</Link>
+        <div className="album-heading"><p className="eyebrow">Photo journal / {theme ? String(albumIndex + 1).padStart(2, "0") : "By date"}</p><h1>{album.title}</h1><div><span>{album.photos.length} photographs{theme && album.date && <> · <time dateTime={album.date}>{formatPhotoDate(album.date)}</time></>}</span><span>Click any frame to explore</span></div></div>
+        <PhotoGrid key={album.slug} photos={album.photos} />
+        {navigation.length > 1 && <Link to={`/gallery/${nextAlbum.slug}`} className="next-collection"><div><span className="eyebrow">Next collection</span><h2>{nextAlbum.title}</h2></div><ArrowUpRight size={32} /></Link>}
+      </main>
+      <Footer />
     </div>
   );
 };

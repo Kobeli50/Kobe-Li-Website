@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import Blogs from "./pages/Blogs";
 import Gallery from "./pages/Gallery";
 import Album from "./pages/Album";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/blogs" element={<Blogs />} />

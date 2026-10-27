@@ -4,18 +4,22 @@ import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import SelectedPhotos from "@/components/SelectedPhotos";
+import WritingPreview from "@/components/WritingPreview";
 
-const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
-      <Header />
+const Index = () => (
+  <div className="min-h-screen bg-background">
+    <Header />
+    <main id="main-content">
       <Hero />
       <About />
       <Projects />
+      <WritingPreview />
+      <SelectedPhotos />
       <Contact />
-      <Footer />
-    </div>
-  );
-};
+    </main>
+    <Footer />
+  </div>
+);
 
 export default Index;

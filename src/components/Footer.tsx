@@ -1,78 +1,14 @@
-import {
-  Github,
-  Twitter,
-  Linkedin,
-  Heart,
-  Book,
-  Instagram,
-} from "lucide-react";
-import SubstackIcon from "@/components/icons/SubstackIcon";
+import { socialLinks } from "@/lib/socialLinks";
 
-const Footer = () => {
-  return (
-    <footer className="py-12 bg-muted/30">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col items-center space-y-6">
-          <div className="flex items-center space-x-6">
-            <a
-              href="https://www.linkedin.com/in/kobeli50/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-accent transition-colors"
-            >
-              <Linkedin className="w-6 h-6" />
-            </a>
-            <a
-              href="https://www.instagram.com/kobeli50/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-accent transition-colors"
-            >
-              <Instagram className="w-6 h-6" />
-            </a>
-            <a
-              href="https://www.goodreads.com/user/show/187557631-kobe"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-accent transition-colors"
-            >
-              <Book className="w-6 h-6" />
-            </a>
-            <a
-              href="https://substack.com/@kobeli2"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Substack"
-              className="text-muted-foreground hover:text-accent transition-colors"
-            >
-              <SubstackIcon className="w-6 h-6" />
-            </a>
-            <a
-              href="https://x.com/Kobeli50"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-accent transition-colors"
-            >
-              <Twitter className="w-6 h-6" />
-            </a>
-            <a
-              href="https://github.com/Kobeli50"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-accent transition-colors"
-            >
-              <Github className="w-6 h-6" />
-            </a>
-          </div>
-
-          <div className="text-center text-muted-foreground">
-            <p className="flex items-center justify-center space-x-2"></p>
-            <p className="mt-2 text-sm">© {new Date().getFullYear()} Kobe Li. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-};
+const Footer = () => (
+  <footer className="site-footer">
+    <div className="page-width footer-inner">
+      <p className="footer-signature">Thanks for stopping by.<span>© {new Date().getFullYear()} Kobe Li</span></p>
+      <nav className="footer-links" aria-label="Find me elsewhere">
+        {socialLinks.map(({ label, href, icon: Icon }) => <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}><Icon className="h-[18px] w-[18px]" /></a>)}
+      </nav>
+    </div>
+  </footer>
+);
 
 export default Footer;

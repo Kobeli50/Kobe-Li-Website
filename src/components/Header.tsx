@@ -1,92 +1,43 @@
-import { Github, Instagram, Twitter, Linkedin, Book, Menu } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import SubstackIcon from "@/components/icons/SubstackIcon";
+import { Menu, ArrowUpRight } from "lucide-react";
+import { useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
+  { label: "About", href: "/#about" },
+  { label: "Project", href: "/#projects" },
+  { label: "Writing", href: "/blogs" },
   { label: "Gallery", href: "/gallery" },
-  { label: "Blogs", href: "/blogs" },
-  { label: "Contact", href: "#contact" },
-];
-
-const socialLinks = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/kobeli50/", icon: Linkedin },
-  { label: "Instagram", href: "https://www.instagram.com/kobeli50/", icon: Instagram },
-  { label: "Goodreads", href: "https://www.goodreads.com/user/show/187557631-kobe", icon: Book },
-  { label: "Substack", href: "https://substack.com/@kobeli2", icon: SubstackIcon },
-  { label: "X", href: "https://x.com/Kobeli50", icon: Twitter },
-  { label: "GitHub", href: "https://github.com/Kobeli50", icon: Github },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const Header = () => {
+  const { pathname } = useLocation();
+  const followedMobileLink = useRef(false);
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between xl:grid xl:grid-cols-3">
-          <div className="text-2xl font-bold tracking-tight">Kobe Li</div>
-
-          <nav className="hidden xl:flex items-center justify-center space-x-6">
-            {navLinks.map(({ label, href }) => (
-              <a
-                key={label}
-                href={href}
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {label}
-              </a>
-            ))}
-          </nav>
-
-          <div className="flex items-center space-x-3 xl:justify-self-end">
-            {socialLinks.map(({ label, href, icon: Icon }) => (
-              <Button key={label} variant="ghost" size="icon" className="hidden sm:inline-flex" asChild>
-                <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
-                  <Icon className="h-5 w-5" />
-                </a>
-              </Button>
-            ))}
-
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="xl:hidden" aria-label="Open menu">
-                  <Menu className="h-5 w-5" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="flex flex-col gap-8">
-                <SheetTitle className="text-2xl font-bold tracking-tight">Kobe Li</SheetTitle>
-                <nav className="flex flex-col space-y-4">
-                  {navLinks.map(({ label, href }) => (
-                    <SheetClose key={label} asChild>
-                      <a
-                        href={href}
-                        className="text-xl text-muted-foreground hover:text-foreground transition-colors"
-                      >
-                        {label}
-                      </a>
-                    </SheetClose>
-                  ))}
-                </nav>
-                <div className="flex flex-wrap -ml-2.5 sm:hidden">
-                  {socialLinks.map(({ label, href, icon: Icon }) => (
-                    <Button key={label} variant="ghost" size="icon" asChild>
-                      <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
-                        <Icon className="h-5 w-5" />
-                      </a>
-                    </Button>
-                  ))}
-                </div>
-              </SheetContent>
-            </Sheet>
-          </div>
-        </div>
+    <header className="site-header">
+      <a className="skip-link" href="#main-content">Skip to content</a>
+      <div className="page-width header-inner">
+        <Link to="/" className="wordmark" aria-label="Kobe Li home">kobe li<span>.</span></Link>
+        <nav className="desktop-nav" aria-label="Main navigation">
+          {navLinks.map(({ label, href }) => (
+            <a key={label} href={href} aria-current={href === "/gallery" && pathname.startsWith(href) ? "page" : href === pathname ? "page" : undefined}>
+              {label}{label === "Contact" && <ArrowUpRight size={14} />}
+            </a>
+          ))}
+        </nav>
+        <Sheet>
+          <SheetTrigger asChild><button type="button" className="mobile-menu" aria-label="Open menu"><Menu size={23} /></button></SheetTrigger>
+          <SheetContent className="flex flex-col gap-8" onCloseAutoFocus={(event) => {
+            if (followedMobileLink.current) event.preventDefault();
+            followedMobileLink.current = false;
+          }}>
+            <SheetTitle className="wordmark">kobe li.</SheetTitle>
+            <nav className="flex flex-col gap-6" aria-label="Mobile navigation">
+              {navLinks.map(({ label, href }) => <SheetClose key={label} asChild><a className="text-xl" href={href} onClick={() => { followedMobileLink.current = true; }}>{label}</a></SheetClose>)}
+            </nav>
+          </SheetContent>
+        </Sheet>
       </div>
     </header>
   );
