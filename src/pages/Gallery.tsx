@@ -10,7 +10,7 @@ const Gallery = () => (
     <Header />
     <main id="main-content" className="page-width">
       <div className="gallery-intro journal-intro">
-        <h1>The photo <br /><em>journal.</em></h1>
+        <h1>Photo <br /><em>journal</em></h1>
         <div className="gallery-intro-aside"><p>Still figuring it out</p><span className="camera-note">Was shooting with D610, now Z6III (11/26)</span><a href="#collections" className="text-link">Browse collections <ArrowDown size={16} /></a></div>
       </div>
       <section id="collections" className="collections-section" aria-labelledby="collections-title">
