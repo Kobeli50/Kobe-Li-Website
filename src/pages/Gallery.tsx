@@ -25,7 +25,7 @@ const Gallery = () => (
         </div>
         {collections.length === 0 && <p className="section-note">The first collection is on its way.</p>}
       </section>
-      <p className="journal-end">Ongoing collection<br /><span>More moments to come.</span></p>
+      <p className="journal-end">Ongoing collection</p>
     </main>
     <Footer />
   </div>
