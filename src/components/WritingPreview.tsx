@@ -13,8 +13,7 @@ const WritingPreview = () => (
       <a className="home-writing__entry" href="https://substack.com/@kobeli2" target="_blank" rel="noopener noreferrer">
         <span className="home-writing__icon"><SubstackIcon aria-hidden="true" /></span>
         <div className="home-writing__copy">
-          <p className="eyebrow">Substack</p>
-          <h3>Writing on random thoughts.</h3>
+          <h3>Substack</h3>
         </div>
         <span className="home-writing__read">Read &amp; subscribe <ArrowUpRight size={18} aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></span>
       </a>
