@@ -17,7 +17,7 @@ const Hero = () => (
         <cite>— Thich Nhat Hanh</cite>
       </blockquote>
       <div className="hero-links">
-        <a href="#about" className="solid-link">A little about me <ArrowDown size={17} /></a>
+        <a href="#about" className="solid-link">About me <ArrowDown size={17} /></a>
         <Link to="/gallery" className="text-link">Explore my photos <ArrowUpRight size={16} /></Link>
       </div>
       <a href="#contact" onClick={prefillDealSubject} className="deal-link">Looking for private deals <ArrowUpRight size={14} /></a>
