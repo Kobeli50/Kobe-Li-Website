@@ -209,7 +209,7 @@ export const collections: Album[] = collectionDefinitions.flatMap(({ slug, title
 });
 
 // Homepage selection is intentionally independent of the gallery's theme cards.
-const favoriteIds = ["2026-07-02/DSC_4750"];
+const favoriteIds = ["2026-08-24/DSC_6215"];
 export const favorites: Photo[] = favoriteIds.flatMap((id) => allPhotos.filter((photo) => photo.id === id));
 
 export const portrait: Photo = allPhotos.find((photo) => photo.id === "2026-09-06/DSC_6522")!;

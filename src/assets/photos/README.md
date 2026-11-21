@@ -9,7 +9,7 @@ There are nine visible photos across four collections:
 - **Animals** — DSC_6541, DSC_6544, DSC_6587, and DSC_6592, September 6, 2026.
 
 DSC_6589 is excluded from all gallery views. Its website copies and original
-Desktop photo remain intact. The homepage selection contains only DSC_4750.
+Desktop photo remain intact. The homepage selection contains only DSC_6215.
 Original camera photos on the Desktop are unchanged; files here are optimized
 website copies.
 
@@ -64,7 +64,7 @@ Each subject's `coverId` selects its gallery cover. Date archives use the separa
 ## Homepage favorites and hidden photos
 
 The `favoriteIds` list in `src/lib/photos.ts` controls the homepage selection. It
-currently includes only `2026-07-02/DSC_4750`. Favorites reference existing album
+currently includes only `2026-08-24/DSC_6215`. Favorites reference existing album
 photos, so no duplicate image files are needed. The old `favorites/` folder is
 not read automatically.
 
