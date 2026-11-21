@@ -19,7 +19,7 @@ const Gallery = () => (
           {collections.map((album, index) => (
             <Link key={album.slug} to={`/gallery/${album.slug}`} className="collection-card">
               <div className="collection-cover"><img src={album.cover.thumbnailSrc ?? album.cover.src} alt={album.cover.alt} width={album.cover.width} height={album.cover.height} loading={index === 0 ? "eager" : "lazy"} decoding="async" /><span className="collection-open" aria-hidden="true"><ArrowUpRight size={24} /></span></div>
-              <div className="collection-caption"><div><h3>{album.title}</h3><span>{album.photos.length} photographs</span></div><ArrowUpRight size={22} aria-hidden="true" /></div>
+              <div className="collection-caption"><div><h3>{album.title}</h3><span>{album.photos.length} {album.photos.length === 1 ? "photograph" : "photographs"}</span></div><ArrowUpRight size={22} aria-hidden="true" /></div>
             </Link>
           ))}
         </div>

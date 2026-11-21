@@ -1,9 +1,10 @@
 # Photo collection
 
 The gallery is organized by subject, while photo files stay in date folders.
-There are eight visible photos across three collections:
+There are nine visible photos across four collections:
 
 - **Landscapes** — DSC_4339 and DSC_4750, July 2, 2026.
+- **Architecture** — DSC_6215 (Cafe light study), August 24, 2026.
 - **People** — DSC_6522 and DSC_6525, September 6, 2026.
 - **Animals** — DSC_6541, DSC_6544, DSC_6587, and DSC_6592, September 6, 2026.
 

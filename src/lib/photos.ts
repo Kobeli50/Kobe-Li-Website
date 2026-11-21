@@ -45,6 +45,11 @@ const photoDetails: Record<string, PhotoDetails> = {
     width: 2200,
     height: 1469,
   },
+  "2026-08-24/DSC_6215": {
+    alt: "Curved walkways and a sunlit café beneath the tall glass walls of an atrium",
+    width: 2200,
+    height: 1469,
+  },
   "2026-09-06/DSC_6522": {
     alt: "Kobe smiling in a green shirt in front of bamboo",
     caption: "me",
@@ -87,6 +92,7 @@ const photoDetails: Record<string, PhotoDetails> = {
 
 const albumCovers: Record<string, string> = {
   "2026-07-02": "DSC_4750",
+  "2026-08-24": "DSC_6215",
   "2026-09-06": "DSC_6592",
 };
 
@@ -168,6 +174,12 @@ const collectionDefinitions = [
     title: "Landscapes",
     coverId: "2026-07-02/DSC_4750",
     photoIds: ["2026-07-02/DSC_4339", "2026-07-02/DSC_4750"],
+  },
+  {
+    slug: "architecture",
+    title: "Architecture",
+    coverId: "2026-08-24/DSC_6215",
+    photoIds: ["2026-08-24/DSC_6215"],
   },
   {
     slug: "people",

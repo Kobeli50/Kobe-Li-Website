@@ -37,6 +37,6 @@ automatically deployed through Vercel.
 
 ## Photo journal
 
-Photos are grouped into Landscapes, People, and Animals, with dates shown inside
+Photos are grouped into Landscapes, Architecture, People, and Animals, with dates shown inside
 each collection. See the [photo collection guide](src/assets/photos/README.md)
 for adding photos, changing captions, and choosing homepage favorites.
